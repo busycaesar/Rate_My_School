@@ -1,0 +1,30 @@
+{
+  "tags": {
+    "allowUnknownTags": ["component"],
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["src"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": ["node_modules/better-docs/category"],
+  "opts": {
+    "template": "node_modules/better-docs",
+    "destination": "documentation",
+    "recurse": true,
+    "readme": "README.md"
+  },
+  "templates": {
+    "better-docs": {
+      "name": "Backend documentation",
+      "title": "Backend documentation",
+      "navLinks": [
+        {
+          "label": "GitHub Repository",
+          "href": "https://github.com/busycaesar/MERN_Stack_Template/tree/Master/Backend"
+        }
+      ]
+    }
+  }
+}

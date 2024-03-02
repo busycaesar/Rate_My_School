@@ -1,0 +1,38 @@
+name: Backend/Lint
+
+# Trigger this workflow when PR is raised or the code is pushed to any of the branch.
+on:
+  pull_request:
+    branches:
+      - "*"
+
+  push:
+    branches:
+      - "*"
+
+jobs:
+  lint:
+    name: Test
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./Backend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: "./Backend/package-lock.json"
+
+      - name: Install node dependencies
+        run: npm ci
+
+      - name: Run script for running tests
+        run: npm test
