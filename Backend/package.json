@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "description": "Backend template for MERN stack project.",
+  "description": "Backend of 'Rate my school'",
   "scripts": {
     "test:watch": "jest -c jest.config.js --runInBand --watch --",
     "test": "jest -c jest.config.js --runInBand --",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+httmls://github.com/busycaesar/MERN_Stack_Template/Backend.git"
+    "url": "https://github.com/busycaesar/Rate_My_School/tree/Master/Backend"
   },
   "author": "Dev Jigishkumar Shah",
   "dependencies": {
